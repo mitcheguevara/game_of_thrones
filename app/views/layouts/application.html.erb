@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>GameOfThrones</title>
-    <%= csrf_meta_tags %>
+ <html>
+   <head>
+     <title>GameOfThrones</title>
+     <%= csrf_meta_tags %>
+     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   </head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+   <body>
+     <nav>
+       <p class='alert'> <%= flash[:alert] %> </p>
+       <p class='notice'> <%= flash[:notice] %> </p>
+     </nav>
+     <h1>Game Of Thrones</h1>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+     <%= yield %>
+
+     <footer> "You Know Nothing John Snow." </footer>
+   </body>
+ </html>

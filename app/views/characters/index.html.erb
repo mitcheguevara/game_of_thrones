@@ -1,0 +1,17 @@
+<h2>Character Overview</h2>
+ <%= link_to "Create New Character", new_house_character_path %>
+
+<div class="bannerbox">
+
+
+
+   <% @houses.each do |h| %>
+     <div class="banners">
+      <h3><a href="/characters/<%= h.id %>"><%= h.name %></a></h3>
+     <img src="<%= h.banner_img %>"/>
+     </div>
+   <% end %>
+
+
+
+</div>
