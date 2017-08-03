@@ -13,7 +13,7 @@
    <%= f.submit "Update" %> <%= link_to "Cancel", house_character_path(@house, @character) %>
  <% end %>
 
- <p>Bend the knee or die</p>
- <%= form_for [@house, @character] do |f| %>
-   <%= f.submit "Off with thier head", method: :destroy %>
- <% end %>
+
+
+<%= link_to 'He who cast the sentence, should swing the sword', house_character_path(@house, @character),
+            data: {:confirm => 'Any Final Words My Lord?'}, :method => :delete %>
