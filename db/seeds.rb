@@ -23,7 +23,29 @@ House.destroy_all
    location: 'Winterfell',
    banner_img: 'http://orig06.deviantart.net/85ed/f/2012/301/5/f/house_stark_banner_by_grimklok-d5j8rz9.png'
  })
+ lannister = House.create({
+   name: 'House Baratheon',
+   sigil: 'A crowned black stag rampant on a gold field',
+   motto: 'Ours is the Fury',
+   location: 'Storms End',
+   banner_img: 'http://orig01.deviantart.net/ca34/f/2012/301/4/6/house_baratheon_banner_by_grimklok-d5j8r6f.png'
+ })
 
+ stark = House.create({
+   name: 'House Targarian',
+   sigil: 'A red three-headed dragon,on a black field',
+   motto: "Fire and Blood",
+   location: 'Dragonstone',
+   banner_img: 'http://orig06.deviantart.net/6782/f/2012/301/7/4/house_targeryan_banner_by_grimklok-d5j8yar.png'
+ })
+
+ stark = House.create({
+   name: 'House Greyjoy',
+   sigil: 'A golden kraken on a black field',
+   motto: "What Is Dead May Never Die",
+   location: 'Pyke',
+   banner_img: 'http://orig03.deviantart.net/52b9/f/2012/301/4/8/house_greyjoy_banner_by_grimklok-d5j8upo.png'
+ })
  snow = stark.characters.create({
    name: 'Robb Stark',
    title: 'The Young Wolf',

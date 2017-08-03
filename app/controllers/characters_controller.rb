@@ -13,7 +13,7 @@ class CharactersController < ApplicationController
      @house = House.find(params[:house_id])
      @character = Character.find(params[:id])
      @character.update!(character_params)
-     flash[:notice] = "#{@character.name} has been updated!"
+     flash[:notice] = "#{@character.name} thats a great addition"
 
      redirect_to house_character_path(@house, @character)
    end
@@ -26,7 +26,7 @@ class CharactersController < ApplicationController
    def create
      @house = House.find(params[:house_id])
      @character = @house.characters.create(character_params)
-     flash[:notice] = "#{@character.name} has been created!"
+     flash[:notice] = "#{@character.name} welcome."
 
      redirect_to house_path(@house)
    end
@@ -35,7 +35,7 @@ class CharactersController < ApplicationController
      @house = House.find(params[:house_id])
      @character = Character.find(params[:id])
      @character.destroy!
-     flash[:notice] = "#{@character.name} has perished!...typical"
+     flash[:notice] = "#{@character.name} Off with his head."
 
      redirect_to house_character_path(@house, @character)
    end

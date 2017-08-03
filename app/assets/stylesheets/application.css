@@ -30,6 +30,7 @@ body{
   background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
   align-content: center;
   justify-content: center;
+  text-align: center;
 }
  .flexbox-container {
    display: inline-flex;

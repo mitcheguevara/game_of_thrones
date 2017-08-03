@@ -14,7 +14,7 @@ class HousesController < ApplicationController
 
    def create
      @house = House.create!(house_params)
-     flash[:notice] = "Successfully created #{@house.name}!"
+     flash[:notice] = " Welcome to the game#{@house.name}!"
 
      redirect_to house_path(@house)
    end
@@ -26,7 +26,7 @@ class HousesController < ApplicationController
    def update
      @house = House.find(params[:id])
      @house.update!(house_params)
-     flash[:notice] = "Successfully updated #{@house.name}!"
+     flash[:notice] = "Will this change win you the throne? #{@house.name}!"
 
      redirect_to house_path(@house)
    end
